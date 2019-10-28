@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<!-- <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+	<link rel="stylesheet" type="text/css" href="jqueryui.custom.css">
+	<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+	<script
+	  src="https://code.jquery.com/jquery-3.4.1.min.js"
+	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://atuin.ru/demo/ui-slider/jquery.ui.touch-punch.min.js"></script>
+    
+</head>
+<body>
+
+	<div class="wrapper">
+		<header>
+			<div class="header-container">
+				<div class="logo">
+					<img src="logo.png" alt="Логотип">
+				</div>
+				<div class="tel">
+					<div>8-800-100-5005</div>
+					<div>+7(3452)522-000</div>
+				</div>
+			</div>
+		</header>
+
+		<nav>
+			<div class="nav-container">
+				<ul class="header-menu">
+					<li><a href="#">Кредитные карты</a></li>
+					<li><a href="#" class="active">Вклады</a></li>
+					<li><a href="#">Дебетовая карта</a></li>
+					<li><a href="#">Страхование</a></li>
+					<li><a href="#">Друзья</a></li>
+					<li><a class="last-item" href="#">Интернет-банк</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<main class="content">
+			<div class="page-link">
+				<a href="#">Главная</a><span> ></span>
+				<a href="#">Вклады</a><span> ></span>
+				<a class="last-item active" href="#">Калькулятор</a>
+			</div>
+			<table class="calc-container">
+				<th>Калькулятор</th>
+				<form method="post" id="forma">
+					<tr>
+						<td class="one">Дата оформления вклада</td>
+						<td class="two"><input type="text" id="datepicker" name="dateselector"  required></td>
+						<td class="three"></td>
+					</tr>
+					<tr>
+						<td class="one">Сумма вклада</td>
+						<td class="two"><input type="text" id="amount-1" name="summstart"  required></td>
+						<td class="three"><div id="slider-1"></div></td>
+					</tr>
+					<tr>
+						<td class="one">Срок вклада</td>
+						<td class="two select">
+							<p><select size="1" name="period">
+							    <option selected value="1">1 год</option>
+							    <option value="2">2 года</option>
+							    <option value="3">3 года</option>
+							    <option value="4">4 года</option>
+							    <option value="5">5 лет</option>
+							</select></p>
+						</td>
+						<td class="three"></td>
+					</tr>
+					<tr>
+						<td class="one">Пополнение вклада</td>
+							<td class="radio-btn">
+								<input type="radio" name="popolnenie" id="b1" value="no"  required/>
+								<label for="b1">Нет</label> 
+								<input type="radio" name="popolnenie" id="b2" value="yes" required/>
+								<label for="b2">Да</label>
+							</td>
+						<td class="three"></td>
+					</tr>
+					<tr>
+						<td class="one">Сумма пополнения вклада</td>
+						<td class="two"><input type="text" id="amount-2" name="summadd"  required></td>
+						<td class="three"><div id="slider-2"></div></td>
+					</tr>
+					<tr>
+						<td colspan="3"><input class="submit" type="submit" name="submit" value="Рассчитать">Результат: <b id="resultat"></b></td>
+					</tr>
+				</form>
+			</table>
+		</main>
+
+		<footer>
+			<div class="footer-container">
+				<ul class="footer-menu">
+					<li><a href="#">Кредитные карты</a></li>
+					<li><a href="#">Вклады</a></li>
+					<li><a href="#">Дебетовая карта</a></li>
+					<li><a href="#">Страхование</a></li>
+					<li><a href="#">Друзья</a></li>
+					<li><a href="#">Интернет-банк</a></li>							
+				</ul>
+			</div>
+		</footer>
+		
+	</div>
+	
+</body>
+<script type="text/javascript" src="script.js"></script>
+
+</html>
